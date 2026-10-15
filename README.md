@@ -14,7 +14,12 @@ Spotifeishin merges the elegant liquid-glass architecture and floating playerbar
 - **Pixel-perfect Metadata Pills:** Aligned metadata tags (`Genre`, `Record Label`, `Tags`) with clean vertical centering.
 - **Polished Home:** Ambient hero carousel with random album discovery prioritized.
 
----
+---<img width="1920" height="1080" alt="imagen" src="https://github.com/user-attachments/assets/304b7840-39b9-4a1b-bee1-2938a745459e" />
+
+
+<img width="1920" height="1080" alt="imagen" src="https://github.com/user-attachments/assets/df57de79-d038-447f-a71f-89c4014d3b33" />
+
+
 
 ## 🚀 Installation
 
