@@ -1,0 +1,1144 @@
+/* ══════════════════════════════════════════════════════════════════════
+   FEISHIN DEFINITIVE EDITION: FLUENTSHIN × SPOTIFY ENCORE HI-FI
+   ══════════════════════════════════════════════════════════════════════ */
+
+:root,
+[data-mantine-color-scheme="dark"] {
+    /* ── Paleta Base Spotify Encore Hi-Fi ──────────────────────────── */
+    --theme-colors-background: #0E0E10 !important;
+    --theme-colors-background-alternate: #070708 !important;
+    --theme-colors-surface: #18181B !important;
+    --theme-colors-foreground: #F5F5F7 !important;
+    --theme-colors-foreground-muted: #A1A1A6 !important;
+    --theme-colors-primary: #1DB954 !important;
+    --theme-colors-state-info: #1ED760 !important;
+    --theme-colors-border: rgba(255, 255, 255, 0.07) !important;
+
+    --mantine-color-body: #0E0E10 !important;
+    --mantine-color-text: #F5F5F7 !important;
+    --mantine-color-dimmed: #A1A1A6 !important;
+    --mantine-color-primary-filled: #1DB954 !important;
+    --mantine-color-primary-filled-hover: #1ED760 !important;
+    --mantine-color-primary-light: rgba(29, 185, 84, 0.15) !important;
+    --mantine-color-primary-light-color: #1ED760 !important;
+    --mantine-font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif !important;
+
+    /* ── Tokens Adaptativos Fluentshin × Spotify ───────────────────── */
+    --fluentshin-accent: #1DB954;
+    --fluentshin-accent-2: #1ED760;
+    --fluentshin-fg: var(--theme-colors-foreground);
+    --fluentshin-bg: var(--theme-colors-background);
+
+    /* Tintes de acento (hover, selecciones) */
+    --fluentshin-tint: color-mix(in srgb, var(--fluentshin-accent) 13%, transparent);
+    --fluentshin-tint-strong: color-mix(in srgb, var(--fluentshin-accent) 22%, transparent);
+    --fluentshin-selection: color-mix(in srgb, var(--fluentshin-accent) 35%, transparent);
+
+    /* Bordes de luz y resplandores */
+    --fluentshin-border: color-mix(in srgb, var(--fluentshin-accent) 18%, rgba(255, 255, 255, 0.06));
+    --fluentshin-border-soft: color-mix(in srgb, var(--fluentshin-accent) 10%, rgba(255, 255, 255, 0.04));
+    --fluentshin-border-strong: color-mix(in srgb, var(--fluentshin-accent) 42%, transparent);
+    --fluentshin-glow: color-mix(in srgb, var(--fluentshin-accent) 50%, transparent);
+    --fluentshin-halo: color-mix(in srgb, var(--fluentshin-accent) 24%, transparent);
+
+    /* Chips neutros de cristal */
+    --fluentshin-chip: color-mix(in srgb, var(--fluentshin-fg) 6%, transparent);
+    --fluentshin-chip-border: color-mix(in srgb, var(--fluentshin-fg) 10%, transparent);
+
+    /* Superficies Liquid Glass */
+    --fluentshin-glass: color-mix(in srgb, var(--fluentshin-bg) 76%, transparent);
+    --fluentshin-glass-deep: color-mix(in srgb, var(--fluentshin-bg) 90%, transparent);
+    --fluentshin-specular: rgba(255, 255, 255, 0.09);
+
+    /* Degradados Spotify Esmeralda */
+    --fluentshin-grad: linear-gradient(90deg, #169C46 0%, #1DB954 50%, #1ED760 100%);
+    --fluentshin-grad-vertical: linear-gradient(180deg, #1ED760 0%, #1DB954 100%);
+    --fluentshin-grad-glass: linear-gradient(
+        90deg,
+        color-mix(in srgb, #169C46 24%, transparent) 0%,
+        color-mix(in srgb, #1ED760 30%, transparent) 100%
+    );
+    --fluentshin-ink: linear-gradient(
+        135deg,
+        #FFFFFF 45%,
+        color-mix(in srgb, #FFFFFF 55%, #1ED760) 100%
+    );
+
+    /* Scrollbars */
+    --theme-scrollbar-size: 8px;
+    --theme-scrollbar-handle-border-radius: 999px;
+    --theme-scrollbar-handle-background: color-mix(in srgb, var(--fluentshin-accent) 24%, rgba(255, 255, 255, 0.1));
+    --theme-scrollbar-handle-hover-background: color-mix(in srgb, var(--fluentshin-accent) 45%, rgba(255, 255, 255, 0.2));
+    --theme-scrollbar-handle-active-background: #1DB954;
+}
+
+/* ── Fondo Ambiental Atmosférico ───────────────────────────────────── */
+
+.fs-default-layout-module-layout {
+    background-color: var(--fluentshin-bg);
+    background-image:
+        radial-gradient(1100px 700px at 12% -8%, color-mix(in srgb, var(--fluentshin-accent) 14%, transparent), transparent 62%),
+        radial-gradient(900px 600px at 105% 0%, color-mix(in srgb, var(--fluentshin-accent-2) 8%, transparent), transparent 60%),
+        radial-gradient(1000px 800px at 80% 115%, color-mix(in srgb, var(--fluentshin-accent) 5%, transparent), transparent 60%);
+}
+
+.fs-main-content-module-main-content-container::after {
+    content: '';
+    position: absolute;
+    inset: -40%;
+    z-index: 0;
+    pointer-events: none;
+    background-image:
+        radial-gradient(40% 35% at 28% 30%, color-mix(in srgb, var(--fluentshin-accent) 7%, transparent), transparent 70%),
+        radial-gradient(35% 30% at 72% 65%, color-mix(in srgb, var(--fluentshin-accent-2) 5%, transparent), transparent 70%);
+    animation: fluentshin-drift 50s ease-in-out infinite alternate;
+    will-change: transform;
+}
+
+@keyframes fluentshin-drift {
+    0% { transform: translate3d(-3%, -2%, 0) rotate(0deg) scale(1); }
+    50% { transform: translate3d(2%, 2%, 0) rotate(2deg) scale(1.05); }
+    100% { transform: translate3d(-1%, 3%, 0) rotate(-2deg) scale(1.02); }
+}
+
+/* ── Estructura para la Barra de Reproducción Flotante ─────────────── */
+
+#default-layout {
+    grid-template-rows: 0 calc(100dvh - 114px) 114px !important;
+}
+
+#default-layout.fs-default-layout-module-windows,
+#default-layout.fs-default-layout-module-macos {
+    grid-template-rows: 30px calc(100dvh - 144px) 114px !important;
+}
+
+.fs-main-content-module-main-content-container {
+    margin-right: 12px;
+    overflow: hidden;
+    background: transparent;
+}
+
+.fs-main-content-module-main-content-container:has(.fs-full-screen-player-module-container) {
+    margin-right: 0;
+    overflow: visible;
+}
+
+.fs-main-content-module-main-content-body,
+#main-content .fs-main-content-module-main-content-body {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: 100% !important;
+    padding-bottom: 24px !important;
+}
+
+.fs-native-scroll-area-module-scroll-area {
+    height: calc(100vh - 114px) !important;
+}
+
+.fs-sidebar-module-container {
+    padding-bottom: 24px !important;
+    background: transparent;
+}
+
+.fs-sidebar-module-accordion-content {
+    background: transparent;
+}
+
+.fs-collapsed-sidebar-module-sidebar-container {
+    max-height: calc(100vh - 143px);
+}
+
+.fs-collapsed-sidebar-module-sidebar-container.fs-collapsed-sidebar-module-web,
+.fs-collapsed-sidebar-module-sidebar-container.fs-collapsed-sidebar-module-linux {
+    max-height: calc(100vh - 173px);
+}
+
+/* Paneles laterales de cristal */
+.fs-left-sidebar-module-container {
+    background-color: color-mix(in srgb, var(--theme-colors-background-alternate) 68%, transparent);
+    border-right: 1px solid var(--fluentshin-border-soft);
+    backdrop-filter: blur(24px) saturate(1.4);
+}
+
+.fs-right-sidebar-module-right-sidebar-container {
+    background-color: color-mix(in srgb, var(--theme-colors-background-alternate) 68%, transparent);
+    border-left: 1px solid var(--fluentshin-border-soft);
+    backdrop-filter: blur(24px) saturate(1.4);
+}
+
+.fs-full-screen-player-module-container {
+    height: 100vh !important;
+    padding-right: 12px;
+}
+
+.fs-full-screen-player-module-container .fs-full-screen-player-module-responsive-container {
+    height: calc(100% - 250px);
+}
+
+/* ── PLAYERBAR FLOTANTE LIQUID GLASS + BOTÓN PLAY BLANCO SPOTIFY ───── */
+
+#player-bar {
+    position: fixed;
+    right: 12px;
+    bottom: 12px;
+    left: 12px;
+    height: 90px;
+    background-color: var(--fluentshin-glass);
+    border: 1px solid var(--fluentshin-border);
+    border-radius: 18px;
+    box-shadow:
+        0 16px 48px rgb(0 0 0 / 45%),
+        inset 0 1px 0 var(--fluentshin-specular);
+    backdrop-filter: blur(28px) saturate(1.6);
+}
+
+#player-bar .fs-playerbar-module-container {
+    width: 100%;
+    padding: 0 12px;
+    border-top: 0;
+}
+
+@media (min-width: 900px) {
+    #player-bar .fs-playerbar-module-right-grid-item .fs-playerbar-slider-module-root {
+        min-width: 110px;
+    }
+}
+
+/* Barras de progreso y volumen con degradado esmeralda y halo */
+.fs-playerbar-slider-module-bar,
+.mantine-Slider-bar {
+    background-color: var(--fluentshin-accent);
+    background-image: var(--fluentshin-grad);
+}
+
+.fs-playerbar-slider-module-thumb,
+.fs-slider-module-thumb,
+.mantine-Slider-thumb {
+    background-color: #FFFFFF !important;
+    border: none !important;
+    transition: box-shadow 0.2s ease, transform 0.15s ease;
+}
+
+.fs-playerbar-slider-module-thumb:hover,
+.fs-slider-module-thumb:hover,
+.mantine-Slider-thumb:hover {
+    box-shadow: 0 0 0 6px var(--fluentshin-halo);
+    transform: scale(1.08);
+}
+
+/* Botón central Play/Pausa: Blanco puro de alto contraste -> Verde Spotify en hover */
+.fs-player-button-module-main {
+    background-color: #FFFFFF !important;
+    background-image: none !important;
+    border-radius: 50% !important;
+    box-shadow:
+        0 4px 16px rgba(255, 255, 255, 0.25),
+        inset 0 1px 0 #FFFFFF !important;
+    transition: transform 0.18s cubic-bezier(0.22, 1, 0.36, 1),
+                background-color 0.18s ease,
+                box-shadow 0.25s ease !important;
+}
+
+.fs-player-button-module-main svg {
+    color: #000000 !important;
+    fill: #000000 !important;
+}
+
+.fs-player-button-module-main:hover {
+    background-color: #1ED760 !important;
+    transform: scale(1.08);
+    box-shadow:
+        0 0 24px -2px var(--fluentshin-glow),
+        inset 0 1px 0 rgba(255, 255, 255, 0.4) !important;
+}
+
+.fs-player-button-module-player-button {
+    transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+.fs-player-button-module-secondary svg,
+.fs-player-button-module-tertiary svg {
+    transition: color 0.15s ease;
+}
+
+.fs-player-button-module-secondary:hover,
+.fs-player-button-module-tertiary:hover {
+    background-color: transparent;
+}
+
+.fs-player-button-module-secondary:hover svg,
+.fs-player-button-module-tertiary:hover svg {
+    color: var(--fluentshin-accent-2);
+}
+
+#player-bar .mantine-ActionIcon-root {
+    border-radius: 999px;
+}
+
+#player-bar .mantine-ActionIcon-root:hover {
+    background-color: var(--fluentshin-tint);
+}
+
+.fs-left-controls-module-image,
+.fs-left-controls-module-playerbar-image {
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgb(0 0 0 / 50%);
+}
+
+/* Cola de reproducción flotante */
+.fs-side-drawer-queue-module-queue-drawer {
+    background-color: var(--fluentshin-glass);
+    border: 1px solid var(--fluentshin-border);
+    backdrop-filter: blur(24px) saturate(1.5);
+}
+
+.fs-popover-module-dropdown:has([class*='fs-item-table']) {
+    top: auto !important;
+    right: 12px !important;
+    bottom: 114px !important;
+    left: auto !important;
+    height: 75dvh !important;
+}
+
+.fs-popover-module-dropdown:has([class*='fs-item-table']) .mantine-Popover-arrow,
+.fs-popover-module-dropdown:has([class*='fs-item-table']) .fs-popover-module-arrow {
+    display: none;
+}
+
+/* ── BARRAS DE FILTROS, ACCIONES E INPUTS DE CRISTAL ───────────────── */
+
+.fs-filter-bar-module-filter-bar {
+    padding: 10px 12px;
+    background-color: color-mix(in srgb, var(--fluentshin-bg) 55%, transparent);
+    border-bottom: 1px solid var(--fluentshin-border-soft);
+    backdrop-filter: blur(20px) saturate(1.4);
+}
+
+.fs-filter-bar-module-filter-bar button,
+.fs-library-header-bar-module-header-container button,
+.fs-filter-bar-module-filter-bar input,
+.fs-library-header-bar-module-header-container input {
+    border-radius: 999px;
+}
+
+.fs-filter-bar-module-filter-bar .fs-button-module-root[data-variant='default'],
+.fs-filter-bar-module-filter-bar .fs-button-module-root[data-variant='subtle'],
+.fs-filter-bar-module-filter-bar .fs-button-module-root[data-variant='transparent'],
+.fs-filter-bar-module-filter-bar .fs-button-module-root[data-variant='outline'] {
+    color: var(--theme-colors-surface-foreground);
+    background-color: var(--fluentshin-chip);
+    border: 1px solid var(--fluentshin-chip-border);
+}
+
+.fs-filter-bar-module-filter-bar .fs-button-module-root[data-variant='default']:hover,
+.fs-filter-bar-module-filter-bar .fs-button-module-root[data-variant='subtle']:hover,
+.fs-filter-bar-module-filter-bar .fs-button-module-root[data-variant='transparent']:hover,
+.fs-filter-bar-module-filter-bar .fs-button-module-root[data-variant='outline']:hover {
+    color: var(--fluentshin-fg);
+    background-color: var(--fluentshin-tint-strong);
+    border-color: var(--fluentshin-border-strong);
+}
+
+.fs-filter-bar-module-filter-bar .fs-text-input-module-input {
+    background-color: var(--fluentshin-chip);
+    border: 1px solid var(--fluentshin-chip-border);
+}
+
+.fs-filter-bar-module-filter-bar .mantine-Divider-root {
+    border-color: var(--fluentshin-border-soft);
+}
+
+/* Barra superior izquierda (Buscador + Atrás/Adelante) */
+.fs-action-bar-module-container .fs-button-module-root {
+    color: var(--theme-colors-surface-foreground);
+    background-color: var(--fluentshin-chip);
+    border: 1px solid var(--fluentshin-chip-border);
+    border-radius: 999px;
+}
+
+.fs-action-bar-module-container .fs-button-module-root:hover {
+    color: var(--fluentshin-fg);
+    background-color: var(--fluentshin-tint-strong);
+    border-color: var(--fluentshin-border-strong);
+}
+
+.fs-action-bar-module-container .fs-text-input-module-input {
+    cursor: pointer;
+    background-color: var(--fluentshin-chip);
+    border: 1px solid var(--fluentshin-chip-border);
+    border-radius: 999px;
+    transition: border-color 0.15s ease, background-color 0.15s ease, box-shadow 0.2s ease;
+}
+
+.fs-action-bar-module-container .fs-text-input-module-input:hover {
+    background-color: var(--fluentshin-tint);
+    border-color: var(--fluentshin-border-strong);
+}
+
+/* Controles de formulario y selectores */
+.fs-select-module-input,
+.fs-multi-select-module-input,
+.fs-number-input-module-input,
+.fs-textarea-module-input,
+.fs-color-input-module-input {
+    background-color: var(--fluentshin-chip);
+    border: 1px solid var(--fluentshin-chip-border);
+}
+
+.fs-color-input-module-dropdown {
+    background-color: var(--fluentshin-glass);
+    border: 1px solid var(--fluentshin-border);
+    border-radius: 12px;
+    box-shadow:
+        0 24px 64px rgb(0 0 0 / 40%),
+        inset 0 1px 0 var(--fluentshin-specular);
+    backdrop-filter: blur(28px) saturate(1.5);
+}
+
+.fs-multi-select-module-pill {
+    background-color: var(--fluentshin-tint);
+    border-radius: 999px;
+}
+
+.fs-segmented-control-module-root {
+    background-color: var(--fluentshin-chip);
+    border-radius: 10px;
+}
+
+.mantine-SegmentedControl-indicator {
+    background-color: var(--fluentshin-tint);
+    background-image: var(--fluentshin-grad-glass);
+    border-radius: 8px;
+}
+
+.fs-segmented-control-module-root .fs-segmented-control-module-label {
+    border-radius: 8px;
+    transition: background-color 0.15s ease, color 0.15s ease, box-shadow 0.2s ease;
+}
+
+.fs-segmented-control-module-root .fs-segmented-control-module-label[data-active='true'] {
+    color: var(--fluentshin-fg);
+    background-color: var(--fluentshin-tint);
+    background-image: var(--fluentshin-grad-glass);
+    border-radius: 8px;
+    box-shadow:
+        inset 0 0 0 1px var(--fluentshin-border-strong),
+        inset 0 1px 0 var(--fluentshin-specular);
+    backdrop-filter: blur(8px) saturate(1.3);
+}
+
+/* Paginación */
+.fs-pagination-module-root .fs-pagination-module-control {
+    background-color: var(--fluentshin-chip);
+    border-radius: 8px;
+    box-shadow: inset 0 0 0 1px var(--fluentshin-chip-border);
+    transition: background-color 0.15s ease, color 0.15s ease, box-shadow 0.2s ease;
+}
+
+.fs-pagination-module-root .fs-pagination-module-control:hover {
+    background-color: var(--fluentshin-tint);
+    box-shadow: inset 0 0 0 1px var(--fluentshin-border-strong);
+}
+
+.fs-pagination-module-root .fs-pagination-module-control[data-active] {
+    color: var(--fluentshin-fg);
+    background-color: var(--fluentshin-tint);
+    background-image: var(--fluentshin-grad-glass);
+    box-shadow:
+        inset 0 0 0 1px var(--fluentshin-border-strong),
+        inset 0 1px 0 var(--fluentshin-specular);
+    backdrop-filter: blur(8px) saturate(1.3);
+}
+
+.fs-pagination-module-root .fs-pagination-module-control:disabled,
+.fs-pagination-module-root .fs-pagination-module-control[data-disabled] {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.fs-modal-module-close {
+    z-index: 1000 !important;
+}
+
+.fs-settings-option-module-row .fs-button-module-root.fs-button-module-root {
+    color: var(--theme-colors-surface-foreground);
+    background-color: var(--fluentshin-chip);
+    background-image: none;
+    border: 1px solid var(--fluentshin-chip-border);
+    border-radius: 999px;
+}
+
+.fs-settings-option-module-row .fs-button-module-root.fs-button-module-root:hover {
+    color: var(--fluentshin-fg);
+    background-color: var(--fluentshin-tint-strong);
+    border-color: var(--fluentshin-border-strong);
+}
+
+.fs-list-with-sidebar-container-module-sidebar-container {
+    background-color: color-mix(in srgb, var(--fluentshin-fg) 3%, transparent);
+    border-right-color: var(--fluentshin-border-soft);
+}
+
+/* Botones circulares de Play en cabeceras de lista y tarjetas */
+.fs-play-button-module-text-button {
+    --ai-bg: var(--fluentshin-chip);
+    --ai-hover: var(--fluentshin-tint-strong);
+    --ai-color: var(--fluentshin-fg);
+    color: var(--fluentshin-fg) !important;
+    background-color: var(--fluentshin-chip) !important;
+    background-image: none !important;
+    box-shadow:
+        inset 0 0 0 1px var(--fluentshin-chip-border),
+        0 8px 24px -6px var(--fluentshin-halo);
+    backdrop-filter: blur(12px) saturate(1.4);
+    transition: background-color 0.18s ease, box-shadow 0.25s ease;
+}
+
+.fs-play-button-module-text-button:hover {
+    background-color: var(--fluentshin-tint-strong) !important;
+    box-shadow:
+        inset 0 0 0 1px var(--fluentshin-border-strong),
+        0 10px 32px -6px var(--fluentshin-glow);
+}
+
+.fs-play-button-module-play-button {
+    background-color: var(--fluentshin-chip);
+    background-image: none;
+    box-shadow:
+        inset 0 0 0 1px var(--fluentshin-chip-border),
+        0 8px 24px -6px var(--fluentshin-halo);
+    backdrop-filter: blur(12px) saturate(1.4);
+    transition: transform 0.2s ease, box-shadow 0.25s ease, background-color 0.18s ease;
+}
+
+.fs-play-button-module-play-button svg {
+    stroke: var(--fluentshin-fg);
+}
+
+.fs-play-button-module-play-button.fs-play-button-module-fill svg {
+    fill: var(--fluentshin-fg);
+}
+
+.fs-play-button-module-play-button:hover {
+    background-color: #1DB954;
+    box-shadow:
+        inset 0 0 0 1px #1ED760,
+        0 10px 32px -4px var(--fluentshin-glow);
+}
+
+.fs-play-button-module-play-button:hover svg {
+    stroke: #000000;
+    fill: #000000 !important;
+}
+
+/* ── Microinteracciones ────────────────────────────────────────────── */
+
+button {
+    transition: background-color 0.18s ease, color 0.18s ease,
+        border-color 0.18s ease, box-shadow 0.25s ease, opacity 0.15s ease,
+        scale 0.12s ease;
+}
+
+button:active {
+    scale: 0.96;
+}
+
+.fs-button-module-root[data-variant='filled'] {
+    background-image: var(--fluentshin-grad);
+    border-radius: 8px;
+}
+
+.fs-button-module-root[data-variant='filled']:hover {
+    box-shadow: 0 4px 24px -8px var(--fluentshin-glow);
+}
+
+.mantine-Switch-input:checked + .mantine-Switch-track,
+.mantine-Switch-input:checked ~ * .mantine-Switch-track,
+.mantine-Switch-root [data-checked] .mantine-Switch-track,
+.mantine-Checkbox-input:checked {
+    background-image: var(--fluentshin-grad);
+}
+
+a {
+    transition: color 0.15s ease, opacity 0.15s ease;
+}
+
+.fs-sidebar-module-accordion-content a {
+    border-radius: 8px;
+    transition: background-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+}
+
+.fs-sidebar-module-accordion-content a:hover {
+    transform: translateX(3px);
+}
+
+.fs-text-input-module-input,
+.fs-textarea-module-input,
+.fs-multi-select-module-input,
+.fs-select-module-input,
+.fs-number-input-module-input,
+.fs-color-input-module-input {
+    border-radius: 8px;
+    transition: border-color 0.15s ease, box-shadow 0.2s ease, background-color 0.15s ease;
+}
+
+.fs-text-input-module-input:focus,
+.fs-textarea-module-input:focus,
+.fs-multi-select-module-input:focus-within,
+.fs-select-module-input:focus,
+.fs-number-input-module-input:focus,
+.fs-color-input-module-input:focus {
+    border-color: var(--fluentshin-accent);
+    box-shadow: 0 0 0 3px var(--fluentshin-halo);
+}
+
+:focus-visible {
+    outline: 2px solid var(--fluentshin-glow);
+    outline-offset: 2px;
+}
+
+::selection {
+    background-color: var(--fluentshin-selection);
+}
+
+/* ── Tarjetas de Álbumes: Elevación y Resplandor en Hover ─────────── */
+
+.fs-item-card-module-image-container,
+.fs-poster-card-module-image-container {
+    border-radius: 12px;
+    transition: transform 0.25s ease, box-shadow 0.3s ease;
+}
+
+.fs-item-card-module-image-container:hover,
+.fs-poster-card-module-image-container:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 14px 36px -10px rgb(0 0 0 / 55%),
+        0 0 28px -8px var(--fluentshin-glow);
+}
+
+.fs-item-card-module-image,
+.fs-poster-card-module-image {
+    border-radius: 12px;
+}
+
+.fs-item-card-controls-module-container,
+.fs-grid-card-controls-module-grid-card-controls-container {
+    border-radius: 12px;
+    backdrop-filter: blur(4px);
+}
+
+.fs-image-module-image {
+    animation: fluentshin-fade-in 0.3s ease;
+}
+
+@keyframes fluentshin-fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* ── Buscador Rápido (Command Palette) y Acordeones ────────────────── */
+
+.fs-accordion-module-control {
+    background-color: var(--fluentshin-chip);
+    border-radius: 10px;
+    transition: background-color 0.15s ease;
+}
+
+.fs-accordion-module-control:hover {
+    background-color: var(--fluentshin-tint);
+}
+
+.fs-accordion-module-panel,
+.mantine-Accordion-root .mantine-Accordion-item {
+    background: transparent;
+}
+
+.mantine-Accordion-root .mantine-Accordion-item,
+.mantine-Accordion-root .mantine-Accordion-control,
+.mantine-Accordion-root .mantine-Accordion-content,
+.mantine-Accordion-root .mantine-Accordion-panel,
+.fs-accordion-module-control,
+.fs-accordion-module-panel {
+    border: 0 !important;
+}
+
+[data-mantine-color-scheme='dark'] .mantine-Paper-root,
+[data-mantine-color-scheme='light'] .mantine-Paper-root {
+    --paper-border-color: var(--fluentshin-border);
+}
+
+.fs-modal-module-content:has(input[cmdk-input]) .mantine-Paper-root {
+    --paper-border-color: transparent;
+}
+
+input[cmdk-input] {
+    padding: 10px 14px;
+    color: var(--fluentshin-fg);
+    background-color: var(--fluentshin-chip);
+    border: 1px solid var(--fluentshin-chip-border);
+    border-radius: 10px;
+    transition: border-color 0.15s ease, box-shadow 0.2s ease;
+}
+
+input[cmdk-input]:focus {
+    border-color: var(--fluentshin-accent);
+    outline: none;
+    box-shadow: 0 0 0 3px var(--fluentshin-halo);
+}
+
+[cmdk-item][data-selected='true'] {
+    background-color: var(--fluentshin-tint-strong);
+}
+
+[cmdk-separator] {
+    background-color: var(--fluentshin-border-soft);
+}
+
+.mantine-Kbd-root {
+    background-color: var(--fluentshin-chip);
+    border-color: var(--fluentshin-chip-border);
+}
+
+/* ── Modales, Ajustes y Menús Desplegables (Liquid Glass) ──────────── */
+
+.fs-modal-module-content,
+.fs-dialog-module-root,
+.fs-select-module-dropdown,
+.fs-popover-module-dropdown,
+.fs-context-menu-module-content,
+.fs-dropdown-menu-module-menu-dropdown {
+    background-color: var(--fluentshin-glass-deep) !important;
+    border: 1px solid var(--fluentshin-border);
+    backdrop-filter: blur(28px) saturate(1.5);
+    box-shadow:
+        0 24px 64px rgb(0 0 0 / 50%),
+        inset 0 1px 0 var(--fluentshin-specular);
+}
+
+.fs-context-menu-module-content,
+.fs-dropdown-menu-module-menu-dropdown,
+.fs-select-module-dropdown,
+.fs-popover-module-dropdown {
+    border-radius: 12px;
+}
+
+.fs-modal-module-content,
+.mantine-Modal-content {
+    border-radius: 16px;
+}
+
+.fs-modal-module-content:has(input[cmdk-input]),
+.mantine-Modal-content:has(input[cmdk-input]) {
+    padding: 20px;
+}
+
+/* Cabecera de Settings con desenfoque sólido para evitar texto superpuesto al hacer scroll */
+.fs-modal-module-header {
+    background-color: color-mix(in srgb, var(--fluentshin-bg) 90%, transparent) !important;
+    backdrop-filter: blur(20px) saturate(1.5) !important;
+    border-bottom: 1px solid var(--fluentshin-border-soft);
+    z-index: 20 !important;
+}
+
+.mantine-Modal-overlay {
+    backdrop-filter: blur(4px);
+}
+
+.mantine-Badge-root {
+    background-color: var(--fluentshin-tint);
+}
+
+.fs-item-table-list-module-sticky-header {
+    background-color: color-mix(in srgb, var(--fluentshin-bg) 82%, transparent);
+    backdrop-filter: blur(16px) saturate(1.4);
+}
+
+/* ── PANTALLA DE INICIO (HOME): ÁLBUMES ALEATORIOS ARRIBA + BANNER ─── */
+
+/* Mueve la fila de "Genres" al final del Home para que "Explore from your library" salga primero */
+main div:has(> div > .fs-featured-genres-module-genre-container),
+main div:has(> div > div > a[href$="/genres"]) {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+main div:has(> .fs-featured-genres-module-genre-container),
+main div:has(> div > a[href$="/genres"]) {
+    order: 99 !important;
+}
+
+.fs-feature-carousel-module-carousel {
+    padding: 0;
+}
+
+.fs-feature-carousel-module-carousel-item {
+    border-radius: 20px;
+    box-shadow:
+        0 16px 48px -12px rgb(0 0 0 / 50%),
+        0 0 32px -10px color-mix(in srgb, var(--fluentshin-accent) 25%, transparent),
+        inset 0 0 0 1px var(--fluentshin-specular);
+}
+
+.fs-feature-carousel-module-title {
+    font-weight: 900;
+    letter-spacing: -0.01em;
+    text-shadow: 0 2px 16px rgb(0 0 0 / 60%);
+}
+
+.fs-feature-carousel-module-metadata-section {
+    text-shadow: 0 1px 12px rgb(0 0 0 / 50%);
+}
+
+.fs-feature-carousel-module-album-image-container {
+    border-radius: 12px;
+    box-shadow: inset 0 0 0 1px var(--fluentshin-specular);
+}
+
+.fs-feature-carousel-module-badge {
+    border-radius: 999px;
+}
+
+.fs-feature-carousel-module-nav-arrow-left,
+.fs-feature-carousel-module-nav-arrow-right {
+    background-color: var(--fluentshin-glass);
+    border: 1px solid var(--fluentshin-border-strong);
+    border-radius: 999px;
+}
+
+.fs-featured-genres-module-genre-container {
+    background-color: var(--fluentshin-chip);
+    border: 1px solid var(--fluentshin-chip-border);
+    border-radius: 12px;
+    transition: background-color 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
+}
+
+.fs-featured-genres-module-genre-container:hover {
+    background-color: var(--fluentshin-tint);
+    border-color: var(--fluentshin-border-strong);
+    transform: translateY(-2px);
+}
+
+/* Títulos de sección en Home con barra vertical esmeralda */
+.fs-grid-carousel-module-custom-title-content h3 {
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    background-image: var(--fluentshin-ink);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.fs-grid-carousel-module-custom-title-content h3::before {
+    display: inline-block;
+    width: 4px;
+    height: 0.9em;
+    margin-right: 10px;
+    vertical-align: -0.08em;
+    content: '';
+    background-color: var(--fluentshin-accent);
+    background-image: var(--fluentshin-grad-vertical);
+    border-radius: 999px;
+}
+
+.fs-grid-carousel-module-custom-title-container button {
+    background-color: var(--fluentshin-chip);
+    border: 1px solid var(--fluentshin-chip-border);
+    border-radius: 999px;
+}
+
+.fs-grid-carousel-module-custom-title-container button:hover {
+    background-color: var(--fluentshin-tint-strong);
+    border-color: var(--fluentshin-border-strong);
+}
+
+.fs-grid-carousel-module-indicator-track {
+    background-color: color-mix(in srgb, var(--fluentshin-accent) 20%, transparent);
+    border-radius: 999px;
+}
+
+/* ── PÁGINAS DE ÁLBUM Y ARTISTA: REDISEÑO COMPLETO ────────────────── */
+
+.fs-library-header-module-image-section > .fs-library-header-module-image {
+    border-radius: 16px;
+    box-shadow:
+        0 24px 60px -12px rgb(0 0 0 / 55%),
+        0 0 40px -8px color-mix(in srgb, var(--fluentshin-accent) 35%, transparent),
+        inset 0 0 0 1px var(--fluentshin-specular);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fs-library-header-module-image {
+    border-radius: 16px;
+}
+
+.fs-library-header-module-image-section:hover > .fs-library-header-module-image {
+    transform: scale(1.02);
+    box-shadow:
+        0 28px 70px -12px rgb(0 0 0 / 60%),
+        0 0 56px -8px var(--fluentshin-glow),
+        inset 0 0 0 1px var(--fluentshin-specular);
+}
+
+body:has(.fs-album-artist-detail-content-module-content-container)
+    .fs-library-header-module-image,
+body:has(.fs-album-artist-detail-content-module-content-container) .item-image-placeholder {
+    border-radius: 50%;
+}
+
+body:has(.fs-album-artist-detail-content-module-content-container)
+    .fs-library-header-module-image-overlay {
+    right: 8%;
+    bottom: 8%;
+}
+
+.fs-library-header-module-title {
+    font-size: clamp(2rem, 4dvw, 3.4rem);
+    font-weight: 900;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    background-image: var(--fluentshin-ink);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.fs-library-header-module-item-type {
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    opacity: 0.85;
+}
+
+@media (min-width: 900px) {
+    .fs-library-header-module-library-header {
+        min-height: 400px;
+        padding: 6rem 2.5rem 2.5rem;
+    }
+}
+
+.fs-library-header-module-library-header-menu button {
+    border-radius: 999px;
+}
+
+.fs-library-header-module-library-header-menu .fs-button-module-root[data-variant='transparent'] {
+    --button-height: 36px;
+    --button-fz: 14px;
+    --button-padding-x: 18px;
+    height: 36px;
+    background-color: var(--fluentshin-chip);
+    border: 1px solid var(--fluentshin-chip-border);
+}
+
+.fs-library-header-module-library-header-menu
+    .fs-button-module-root[data-variant='transparent']:hover {
+    background-color: var(--fluentshin-tint-strong);
+    border-color: var(--fluentshin-border-strong);
+}
+
+/* Botones "Next" y "Last" en cristal líquido */
+.fs-play-button-module-wide-text-button {
+    color: var(--fluentshin-fg) !important;
+    background-color: var(--fluentshin-chip) !important;
+    background-image: none !important;
+    box-shadow:
+        inset 0 0 0 1px var(--fluentshin-chip-border),
+        0 8px 24px -6px var(--fluentshin-halo);
+    backdrop-filter: blur(12px) saturate(1.4);
+    transition: transform 0.2s ease, box-shadow 0.25s ease, background-color 0.18s ease;
+}
+
+.fs-play-button-module-wide-text-button.fs-play-button-module-wide-text-button.fs-play-button-module-wide-text-button.fs-play-button-module-wide-text-button.fs-play-button-module-wide-text-button:hover,
+.fs-play-button-module-wide-text-button.fs-play-button-module-wide-text-button.fs-play-button-module-wide-text-button.fs-play-button-module-wide-text-button.fs-play-button-module-wide-text-button:active,
+.fs-play-button-module-wide-text-button.fs-play-button-module-wide-text-button.fs-play-button-module-wide-text-button.fs-play-button-module-wide-text-button.fs-play-button-module-wide-text-button:focus-visible {
+    translate: 0 -1px;
+    background-color: var(--fluentshin-tint-strong) !important;
+    box-shadow:
+        inset 0 0 0 1px var(--fluentshin-border-strong),
+        0 10px 32px -6px var(--fluentshin-glow);
+}
+
+.fs-play-button-module-wide-text-button-label {
+    color: var(--fluentshin-fg) !important;
+}
+
+.fs-play-button-module-wide-text-button svg,
+.fs-play-button-module-wide-text-button-label svg {
+    color: var(--fluentshin-fg) !important;
+    fill: var(--fluentshin-fg) !important;
+}
+
+/* Botón Principal "Play" del Álbum en Verde Spotify con texto negro */
+.fs-play-button-module-wide-text-button:first-child {
+    background-color: #1DB954 !important;
+    background-image: var(--fluentshin-grad) !important;
+    color: #000000 !important;
+    box-shadow:
+        0 8px 24px -4px var(--fluentshin-glow),
+        inset 0 1px 0 rgba(255, 255, 255, 0.35) !important;
+}
+
+.fs-play-button-module-wide-text-button:first-child .fs-play-button-module-wide-text-button-label,
+.fs-play-button-module-wide-text-button:first-child svg {
+    color: #000000 !important;
+    fill: #000000 !important;
+    font-weight: 700 !important;
+}
+
+.fs-play-button-module-wide-text-button.fs-play-button-module-wide-text-button.fs-play-button-module-wide-text-button.fs-play-button-module-wide-text-button.fs-play-button-module-wide-text-button:first-child:hover {
+    background-color: #1ED760 !important;
+    box-shadow:
+        0 12px 32px -4px var(--fluentshin-glow),
+        inset 0 1px 0 rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Etiquetas de metadatos (GENRES, TAGS, RECORD LABEL) centradas y con acabado cristal */
+.fs-pill-module-root {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    height: 28px !important;
+    min-height: 28px !important;
+    padding: 0 13px !important;
+    line-height: 1 !important;
+    background-color: var(--fluentshin-tint);
+    border: 1px solid var(--fluentshin-border);
+    border-radius: 999px;
+    transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+}
+
+.fs-pill-module-root > * {
+    display: inline-flex !important;
+    align-items: center !important;
+    line-height: 1 !important;
+}
+
+.fs-pill-module-root:hover {
+    background-color: var(--fluentshin-tint-strong);
+    border-color: var(--fluentshin-border-strong);
+    transform: translateY(-1px);
+}
+
+/* Columnas de canciones y metadatos en paneles de cristal */
+.fs-album-detail-content-module-songs-column {
+    padding: 6px;
+    background-color: var(--fluentshin-chip);
+    border: 1px solid var(--fluentshin-chip-border);
+    border-radius: 16px;
+}
+
+.fs-album-detail-content-module-metadata-column {
+    padding: 20px;
+    background-color: var(--fluentshin-chip);
+    border: 1px solid var(--fluentshin-chip-border);
+    border-radius: 16px;
+}
+
+.fs-album-detail-content-module-search-text-input {
+    background-color: var(--fluentshin-chip);
+    border-radius: 999px;
+}
+
+.fs-album-detail-content-module-songs-column
+    .fs-item-table-list-column-module-container.fs-item-table-list-column-module-alternate-row-even,
+.fs-full-screen-player-queue-module-queue-container
+    .fs-item-table-list-column-module-container.fs-item-table-list-column-module-alternate-row-even,
+.fs-popover-module-dropdown
+    .fs-item-table-list-column-module-container.fs-item-table-list-column-module-alternate-row-even,
+.fs-right-sidebar-module-right-sidebar-container
+    .fs-item-table-list-column-module-container.fs-item-table-list-column-module-alternate-row-even {
+    background-color: transparent;
+}
+
+.fs-album-detail-content-module-songs-column
+    .fs-item-table-list-column-module-container.fs-item-table-list-column-module-alternate-row-odd,
+.fs-full-screen-player-queue-module-queue-container
+    .fs-item-table-list-column-module-container.fs-item-table-list-column-module-alternate-row-odd,
+.fs-popover-module-dropdown
+    .fs-item-table-list-column-module-container.fs-item-table-list-column-module-alternate-row-odd,
+.fs-right-sidebar-module-right-sidebar-container
+    .fs-item-table-list-column-module-container.fs-item-table-list-column-module-alternate-row-odd {
+    background-color: color-mix(in srgb, var(--fluentshin-fg) 4%, transparent);
+}
+
+.fs-album-artist-detail-content-module-album-section-divider {
+    height: 1px;
+    background-color: transparent;
+    background-image: linear-gradient(
+        90deg,
+        color-mix(in srgb, var(--fluentshin-accent) 45%, transparent),
+        color-mix(in srgb, var(--fluentshin-accent) 5%, transparent)
+    );
+}
+
+/* ── REPRODUCTOR A PANTALLA COMPLETA (FULL SCREEN PLAYER) ──────────── */
+
+.fs-full-screen-player-image-module-image {
+    border-radius: 20px;
+    box-shadow:
+        0 32px 80px -16px rgb(0 0 0 / 65%),
+        0 0 48px -8px color-mix(in srgb, var(--fluentshin-accent) 35%, transparent),
+        inset 0 0 0 1px var(--fluentshin-specular);
+}
+
+.fs-full-screen-player-queue-module-controls-container {
+    bottom: 140px !important;
+}
+
+.fs-full-screen-player-image-module-metadata-container h1 {
+    font-weight: 900;
+    letter-spacing: -0.02em;
+    background-image: var(--fluentshin-ink);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.fs-full-screen-player-queue-module-grid-container::before {
+    background-color: var(--fluentshin-glass);
+    border: 1px solid var(--fluentshin-border);
+    border-radius: 20px;
+    box-shadow:
+        0 24px 64px rgb(0 0 0 / 30%),
+        inset 0 1px 0 var(--fluentshin-specular);
+    backdrop-filter: blur(28px) saturate(1.5);
+}
+
+.full-screen-player-queue-header button,
+.fs-full-screen-player-module-controls-container button {
+    border-radius: 999px;
+}
+
+.fs-full-screen-player-queue-module-active-tab-indicator {
+    height: 3px;
+    background-color: var(--fluentshin-accent);
+    background-image: var(--fluentshin-grad);
+    border-radius: 999px;
+}
+
+.fs-full-screen-visualizer-module-song-info-backdrop {
+    background-color: var(--fluentshin-glass);
+    border: 1px solid var(--fluentshin-border);
+    border-radius: 16px;
+    backdrop-filter: blur(20px) saturate(1.4);
+}
+
+/* ── Detalles Finales ──────────────────────────────────────────────── */
+
+.fs-skeleton-module-skeleton {
+    border-radius: 10px;
+}
+
+.fs-page-header-module-container {
+    background-color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .fs-main-content-module-main-content-container::after,
+    .fs-image-module-image {
+        animation: none;
+    }
+    button:active {
+        scale: none;
+    }
+}
