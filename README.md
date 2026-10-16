@@ -16,6 +16,11 @@ Spotifeishin merges the elegant liquid-glass architecture and floating playerbar
 - **Refined Media Actions:** Prominent Spotify green album play button with glassy secondary pills (`Next` and `Last`).
 - **Polished Home Experience:** Ambient hero carousel with clean section headings and stabilized media grids.
 
+<img width="1920" height="1080" alt="Captura de pantalla de 2026-10-16 10-25-48" src="https://github.com/user-attachments/assets/77320806-98fe-4d41-a839-8a1f0434598e" />
+
+<img width="1920" height="1080" alt="Captura de pantalla de 2026-10-16 10-28-06" src="https://github.com/user-attachments/assets/235f91a2-866e-49d3-a53e-7f7d9b324aad" />
+
+
 ---
 
 ## 🚀 Installation
@@ -36,5 +41,5 @@ You can choose between the latest **v2.0 (Dynamic & 3D)** or the classic **v1.0 
 ## 🤝 Credits & Acknowledgements
 
 - Based on and inspired by [Fluentshin](https://github.com/ZortexSenpai/fluentshin) by [@ZortexSenpai](https://github.com/ZortexSenpai).
-- Created and iteratively refined through collaborative design and prompt engineering.
+- Created and iteratively refined through vibecoding and design and prompt engineering.
 - Licensed under the [MIT License](./LICENSE).
