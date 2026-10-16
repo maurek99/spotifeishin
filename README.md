@@ -2,43 +2,39 @@
 
 A clean, modern **Spotify Encore Hi-Fi** custom CSS theme for [Feishin](https://github.com/jeffvli/feishin).
 
-Spotifeishin merges the elegant liquid-glass architecture and floating playerbar of **Fluentshin** with Spotify's dark UI palette, emerald accents, and fixed component alignments.
+Spotifeishin merges the elegant liquid-glass architecture and floating playerbar of **Fluentshin** with Spotify Encore's dark UI palette, dynamic cover-responsive lighting, interactive 3D depth, and next-generation lyrics.
 
 ---
 
 ## ✨ Features
 
-- **Spotify Aesthetics:** Pure deep carbon backgrounds (`#0E0E10` / `#121212`) and Spotify emerald gradients (`#1DB954` / `#1ED760`).
-- **Floating Playerbar:** Floating liquid-glass bottom bar with a high-contrast pure white Play/Pause circle.
-- **Refined Album View:** Featured green `Play` button with subtle glow and glassy secondary pills for `Next` and `Last`.
-- **Pixel-perfect Metadata Pills:** Aligned metadata tags (`Genre`, `Record Label`, `Tags`) with clean vertical centering.
-- **Polished Home:** Ambient hero carousel with random album discovery prioritized.
+- **Spotify Encore Aesthetics:** Pure deep carbon backgrounds (`#0E0E10` / `#070708`) with Spotify emerald accents (`#1DB954` / `#1ED760`).
+- **Floating Liquid-Glass Playerbar:** Floating bottom bar with a high-contrast pure white Play/Pause action button (turns Spotify green on hover).
+- **Adaptive Dynamic Lyrics:** The active singing lyric capsule dynamically absorbs and amplifies the exact ambient colors of each album cover with an aligned accent indicator pill and a micro-blur depth on inactive verses.
+- **Dynamic Harmonized Album View:** Header titles blend into the album art using optical color-dodge, while right-side metadata cards and pills mirror the active release's color palette without harsh cutoff lines.
+- **Interactive 3D Cover Depth:** Hovering over album covers triggers a smooth internal perspective tilt with specular edge lighting.
+- **Refined Media Actions:** Prominent Spotify green album play button with glassy secondary pills (`Next` and `Last`).
+- **Polished Home Experience:** Ambient hero carousel with clean section headings and stabilized media grids.
 
----<img width="1920" height="1080" alt="imagen" src="https://github.com/user-attachments/assets/304b7840-39b9-4a1b-bee1-2938a745459e" />
-
-
-<img width="1920" height="1080" alt="imagen" src="https://github.com/user-attachments/assets/df57de79-d038-447f-a71f-89c4014d3b33" />
-
-
+---
 
 ## 🚀 Installation
+
+You can choose between the latest **v2.0 (Dynamic & 3D)** or the classic **v1.0 (Static Spotify Theme)**:
 
 1. Open **Feishin**.
 2. Go to **Settings → Appearance**:
    - Set **Theme** to `Default Dark`.
    - Set **Accent Color** to `#1DB954`.
-3. Scroll down to **Custom CSS**, toggle **Enable custom CSS** on, and paste the entire contents of [`index.css`](./index.css).
-4. Reload Feishin (`Ctrl + R` / `Cmd + R`).
+   - *(Recommended for v2.0)* Under **Background**, ensure **Background Blur** is enabled (opacity around `0.6` – `0.8`).
+3. Scroll down to **Custom CSS**, toggle **Enable custom CSS** on.
+4. Copy the entire code from [`2.0.css`](./2.0.css) *(or [`1.0.css`](./1.0.css) if you prefer the classic version)* and paste it into the CSS box.
+5. Reload Feishin (`Ctrl + R` / `Cmd + R`).
 
 ---
 
 ## 🤝 Credits & Acknowledgements
 
-- Based on and inspired by [fluentshin](https://github.com/ZortexSenpai/fluentshin) by **@ZortexSenpai**.
-- Created and iteratively refined through vibecoding & collaborative AI prompt engineering.
-
----
-
-## 📄 License
-
-This project is licensed under the [MIT License](./LICENSE).
+- Based on and inspired by [Fluentshin](https://github.com/ZortexSenpai/fluentshin) by [@ZortexSenpai](https://github.com/ZortexSenpai).
+- Created and iteratively refined through collaborative design and prompt engineering.
+- Licensed under the [MIT License](./LICENSE).
